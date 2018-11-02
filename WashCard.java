@@ -28,17 +28,14 @@ public class WashCard{
       System.out.println("Are you sure type \"yes\" or \"no\"");
          
       if(s.next().equals("yes")){
-      System.out.println("1");
          Scanner s = new Scanner(file);
                
          while(s.hasNextLine()){
             i++;
-            System.out.println(i);
             lortlort = s.nextLine();
             
          }
          String[] test = new String[i];
-         System.out.println("1");
          s.close();
       
          Scanner ss = new Scanner(file);
@@ -46,15 +43,12 @@ public class WashCard{
             test[p] = ss.nextLine();
          }
       
-         System.out.println("2");
+         
          
          String[] blabla = test[idid].split(",");
-         System.out.println(blabla[0] + "," + blabla[1] + "," + blabla[2]);
-         //double bise = (double)Double.parseDouble(blabla[2]);
-         
-         // DET HER ER PÅ EN ELLER ANDEN MÅDE EN STRING!!!
-         blabla[2] = (blabla[2] + impAmount);
-         test[idid] = blabla[0] + "," + blabla[1] + "," + blabla[2]; 
+         double[] run = new double[1];
+         run[0] = (Double.parseDouble(blabla[2]) + impAmount);
+         test[idid] = blabla[0] + "," + blabla[1] + "," + run[0];
          
       
          
@@ -68,7 +62,7 @@ public class WashCard{
          
          
          
-         System.out.println("your balance is now: " + blabla[2]);
+         System.out.println("your balance is now: " + run[0]);
          
       }
       
