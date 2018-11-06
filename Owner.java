@@ -18,8 +18,12 @@ public class Owner{
          idid = s.nextInt();
          System.out.println("Pick charge, check balance, wash");
          imp1 = s.nextLine();
-         if(s.nextLine().equals("charge")){
+         String imp2 = s.nextLine();
+         if(imp2.equals("charge")){
             card.charge((idid-1));
+         }
+         else if(imp2.equals("balance")){
+            
          }
       }
       else if(imp.equals("new customer")){

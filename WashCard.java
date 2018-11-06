@@ -1,6 +1,6 @@
 import java.io.*;
 import java.util.*;
-public class WashCard{
+public class WashCard extends WashOverload{
 
    private double balance = 0;
    Scanner s = new Scanner(System.in);
@@ -9,7 +9,7 @@ public class WashCard{
    File file = new File("customer.txt");
    Customer_v2 c = new Customer_v2();
    int i;
-   String lortlort;
+   
    
    
    public void card() throws FileNotFoundException{
@@ -28,42 +28,7 @@ public class WashCard{
       System.out.println("Are you sure type \"yes\" or \"no\"");
          
       if(s.next().equals("yes")){
-         Scanner s = new Scanner(file);
-               
-         while(s.hasNextLine()){
-            i++;
-            lortlort = s.nextLine();
-            
-         }
-         String[] test = new String[i];
-         s.close();
-      
-         Scanner ss = new Scanner(file);
-         for(int p = 0; p<i; p++){
-            test[p] = ss.nextLine();
-         }
-      
-         
-         
-         String[] blabla = test[idid].split(",");
-         double[] run = new double[1];
-         run[0] = (Double.parseDouble(blabla[2]) + impAmount);
-         test[idid] = blabla[0] + "," + blabla[1] + "," + run[0];
-         
-      
-         
-      
-         PrintStream outPrint = new PrintStream(file);
-      
-         for(int h = 0; h<i;h++){
-            outPrint.println(test[h]);
-         }
-         ss.close();  
-         
-         
-         
-         System.out.println("your balance is now: " + run[0]);
-         
+         fileWrite(file, impAmount, idid);
       }
       
       else if(s.next().equals("no")){
