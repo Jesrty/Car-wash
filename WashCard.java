@@ -42,17 +42,8 @@ public class WashCard extends WashOverload{
    }
   
    
-   public void check(){
-      System.out.println("your balance is: " + balance);
+   public void balance(int idid) throws FileNotFoundException{
+      fileWrite(file, 0, idid);
    }
-
-   public double getBalance(){
-      return balance;
-   }
-   
-   public void setBalance(double price){
-      this.balance = this.balance - price;
-   }
-
 
 }

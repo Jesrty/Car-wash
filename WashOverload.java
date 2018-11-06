@@ -29,9 +29,8 @@ public class WashOverload{
          customerChange[0] = (Double.parseDouble(customerSplit[2]) + balanceChange);
          
          customerHolder[idid] = customerSplit[0] + "," + customerSplit[1] + "," + customerChange[0];
-         
-      
-         PrintStream outPrint = new PrintStream(file);
+         if(customerChange[0]>=0){
+           PrintStream outPrint = new PrintStream(file);
       
          for(int h = 0; h<i;h++){
             outPrint.println(customerHolder[h]);
@@ -39,7 +38,10 @@ public class WashOverload{
          ss.close();  
          
          System.out.println("your balance is now: " + customerChange[0]);
-   
+         }
+         else if(customerChange[0]<0){
+            System.out.println("Du kan ikke komme i minus");
+         }
    
    
    

@@ -23,7 +23,23 @@ public class Owner{
             card.charge((idid-1));
          }
          else if(imp2.equals("balance")){
-            
+            card.balance((idid-1));
+         }
+         else if(imp2.equals("wash")){
+            System.out.println("type 1 for Student wash: 99,95 , type 2 for slave work wash: 199,95 , type 3 for Trump wash: 999,95, type 4 for no wash");
+            int noget = s.nextInt();
+            if(noget == 1){
+               type.type1((idid-1));
+            }
+            if(noget == 2){
+               type.type2((idid-1));
+            }
+            if(noget == 3){
+               type.type3((idid-1));
+            }
+            if(noget == 4){
+               System.out.println("Well fuck you then");
+            }
          }
       }
       else if(imp.equals("new customer")){
