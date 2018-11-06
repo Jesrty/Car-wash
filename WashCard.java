@@ -17,6 +17,7 @@ public class WashCard extends WashOverload{
       c.setID();
       outPrint.println(c.getID() + "," + imp0 + "," + balance);  
       System.out.println("ID: " + c.getID() + "\nName: " + imp0 + "\nBalance: " + balance);
+      c.set2ID(1);
    }
 
 

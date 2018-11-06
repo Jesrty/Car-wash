@@ -9,9 +9,12 @@ public class Owner{
       String imp;
       String imp1;
       int idid = 0;
+      int stop = 0;
       Scanner s = new Scanner(System.in);
       
-      System.out.println("Pick New customer or ID");
+      while(stop == 0){
+      
+      System.out.println("Pick New customer or ID or stop");
       imp = s.nextLine();
       if(imp.equals("id")){
          System.out.println("Type your id number");
@@ -48,9 +51,11 @@ public class Owner{
       }
    
    
+      else if(imp.equals("stop")){
+         stop = 100;
+      }
    
-   
-   
+   }
    
    
    

@@ -18,5 +18,8 @@ public class Customer_v2{
    public int getID(){
       return id;
    }
+   public void set2ID(int id){
+      this.id = id;
+   }
    
 }
