@@ -4,7 +4,14 @@ public class WashOverload{
 
    private String placeHolder;
    private int i;
+   private int wow = 0;
    
+   public int getWow(){
+      return wow;
+   }
+   public void setWow(int wow){
+      this.wow = wow;
+   }
 
    public void fileWrite(File file, double balanceChange, int idid)throws FileNotFoundException{
    
@@ -41,6 +48,7 @@ public class WashOverload{
          }
          else if(customerChange[0]<0){
             System.out.println("Du kan ikke komme i minus");
+            wow = 1;
          }
    
    

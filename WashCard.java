@@ -5,20 +5,18 @@ public class WashCard extends WashOverload{
    private double balance = 0;
    Scanner s = new Scanner(System.in);
    private double impAmount;
-   private String imp1;
+   private String imp0;
    File file = new File("customer.txt");
    Customer_v2 c = new Customer_v2();
    int i;
    
-   
-   
    public void card() throws FileNotFoundException{
       PrintStream outPrint = new PrintStream(new FileOutputStream(file, true));
       System.out.println("type name");
-      imp1 = s.nextLine();
+      imp0 = s.nextLine();
       c.setID();
-      outPrint.println(c.getID() + "," + imp1 + "," + balance);  
-      System.out.println("ID: " + c.getID() + "\nName: " + imp1 + "\nBalance: " + balance);
+      outPrint.println(c.getID() + "," + imp0 + "," + balance);  
+      System.out.println("ID: " + c.getID() + "\nName: " + imp0 + "\nBalance: " + balance);
    }
 
 

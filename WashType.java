@@ -12,48 +12,66 @@ public class WashType extends WashOverload{
       System.out.println("You picked student wash: 99,95");
       fileWrite(file1, -99.95, idid);
       
-      Scanner s = new Scanner(file);
-      type[0] = s.next();
-      add1 = s.nextInt();
-      add1++;
-      type[1] = s.nextLine();
-      type[2] = s.nextLine();
-      PrintStream outPrint = new PrintStream(file);
-      outPrint.println(type[0] + " " + add1 + type[1] + type[2]);
+      if(getWow() != 1){
+         Scanner s = new Scanner(file);
+         String s1 = s.next();
+         int add = s.nextInt();
+         add++;
+         String s2 = s.nextLine();
+         String s3 = s.nextLine();
+         String s4 = s.nextLine();
+         PrintStream outPrint = new PrintStream(file);
+         outPrint.println(s1 + " " + add);
+         outPrint.println(s3);
+         outPrint.println(s4);
       
-      s.close(); 
+         s.close(); 
+      }
+      setWow(0);
    }
    
    public void type2(int idid) throws FileNotFoundException{
       System.out.println("You picked slave work wash: 199,95");
       fileWrite(file1, -199.95, idid);  
       
-      PrintStream outPrint = new PrintStream(file);
-      Scanner s = new Scanner(file);
-      type[0] = s.nextLine();
-      type[1] = s.next();
-      add1 = s.nextInt();
-      add1++;
-      type[2] = s.nextLine();
-      outPrint.println(type[0] + type[1] + add1 + type[2]);
-      s.close();
-       
+      if(getWow() != 1){
+         Scanner s = new Scanner(file);
+         String s1 = s.nextLine();
+         String s2 = s.next();
+         int add = s.nextInt();
+         add++;
+         String s3 = s.nextLine();
+         String s4 = s.nextLine();
+         PrintStream outPrint = new PrintStream(file);
+         outPrint.println(s1);
+         outPrint.println(s2 + " " + add);
+         outPrint.println(s4);
+      
+         s.close();
+      }
+      setWow(0);
    }
    
    public void type3(int idid) throws FileNotFoundException{
       System.out.println("You picked Trump wash: 999,95");
       fileWrite(file1, -999.95, idid);   
       
-      PrintStream outPrint = new PrintStream(file);
-      Scanner s = new Scanner(file);
-      type[0] = s.nextLine();
-      type[1] = s.nextLine();
-      type[2] = s.next();
-      add1 = s.nextInt();
-      add1++;
-      outPrint.println(type[0] + type[1] + type[2] + add1);
-      s.close();
+      if(getWow() != 1){
+         Scanner s = new Scanner(file);
+         String s1 = s.nextLine();
+         String s2 = s.nextLine();
+         String s3 = s.next();
+         int add = s.nextInt();
+         add++;
+         String s4 = s.nextLine();
+         PrintStream outPrint = new PrintStream(file);
+         outPrint.println(s1);
+         outPrint.println(s2);
+         outPrint.println(s3 + " " + add);
       
+         s.close();
+      }
+      setWow(0);
    }
    
 
