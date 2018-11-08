@@ -8,7 +8,7 @@ public class WashType extends WashOverload{
    File file1 = new File("customer.txt");
    int add1;
    
-   // Subtracts the "student wash" from the customer balance and adds 1 to statistic.txt  
+   // Subtracts the "student wash" price from the customer balance and adds 1 to statistic.txt  
    public void type1(int idid) throws FileNotFoundException{
       System.out.println("You picked student wash: 99,95");
       fileWrite(file1, -99.95, idid); //fileWrite methode from WashOverload
@@ -31,7 +31,7 @@ public class WashType extends WashOverload{
       }
       setWow(0);
    }
-   // Subtracts the "slave work wash" from the customer balance and adds 1 to statistic.txt     
+   // Subtracts the "slave work wash"  price from the customer balance and adds 1 to statistic.txt     
    public void type2(int idid) throws FileNotFoundException{
       System.out.println("You picked slave work wash: 199,95");
       fileWrite(file1, -199.95, idid);  
@@ -53,7 +53,7 @@ public class WashType extends WashOverload{
       }
       setWow(0);
    }
-   // Subtracts the "Trump wash" from the customer balance and adds 1 to statistic.txt     
+   // Subtracts the "Trump wash" price from the customer balance and adds 1 to statistic.txt     
    public void type3(int idid) throws FileNotFoundException{
       System.out.println("You picked Trump wash: 999,95");
       fileWrite(file1, -999.95, idid);   
