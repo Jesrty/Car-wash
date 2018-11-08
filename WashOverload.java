@@ -5,6 +5,15 @@ public class WashOverload{
    private String placeHolder;
    private int i;
    private int wow = 0;
+   private int sta1;
+   private int sta2;
+   private int sta3;
+   private int sta4;
+   private String stat1;
+   private String stat2;
+   private String stat3;
+   
+   File file2 = new File("Statistic.txt");
    
    public int getWow(){
       return wow;
@@ -63,6 +72,29 @@ public class WashOverload{
       }
    
    
+   
+   }
+
+
+   public void getStatistics()throws FileNotFoundException{
+      Scanner s = new Scanner(file2);
+      
+      stat1 = s.next();
+      sta1 = s.nextInt();
+      stat2 = s.next();
+      sta2 = s.nextInt();
+      stat3 = s.next();
+      sta3 = s.nextInt();
+      
+      sta4 = sta1 + sta2 + sta3;
+   
+      System.out.println("Student wash:       " + sta1 + "\t\t" + (((double)sta1/(double)sta4)*100) + "%");
+      System.out.println("Slave work wash:    " + sta2 + "\t\t" + (((double)sta2/(double)sta4)*100) + "%");
+      System.out.println("Trump wash:         " + sta3 + "\t\t" + (((double)sta3/(double)sta4)*100) + "%");
+      System.out.println("total washes:       " + (sta1 + sta2 + sta3));
+      System.out.println();
+   
+      s.close();
    
    }
 
