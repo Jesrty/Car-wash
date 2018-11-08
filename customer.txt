@@ -1,4 +1,4 @@
-1,jesper ravn,300.0
+1,jesper ravn,300.00
 2,mads,200.0
 3,Nikas r,600.0
 4,brian,0.0
