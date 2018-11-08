@@ -76,6 +76,7 @@ public class WashOverload{
    }
 
 
+   //Skriver statestik filen pæt ud og i %
    public void getStatistics()throws FileNotFoundException{
       Scanner s = new Scanner(file2);
       
