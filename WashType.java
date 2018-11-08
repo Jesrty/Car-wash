@@ -7,11 +7,13 @@ public class WashType extends WashOverload{
    File file = new File("Statistic.txt");
    File file1 = new File("customer.txt");
    int add1;
-      
+   
+   // Subtracts the "student wash" from the customer balance and adds 1 to statistic.txt  
    public void type1(int idid) throws FileNotFoundException{
       System.out.println("You picked student wash: 99,95");
-      fileWrite(file1, -99.95, idid);
+      fileWrite(file1, -99.95, idid); //fileWrite methode from WashOverload
       
+      // Copies and adds to statistic.txt 
       if(getWow() != 1){
          Scanner s = new Scanner(file);
          String s1 = s.next();
@@ -29,7 +31,7 @@ public class WashType extends WashOverload{
       }
       setWow(0);
    }
-   
+   // Subtracts the "slave work wash" from the customer balance and adds 1 to statistic.txt     
    public void type2(int idid) throws FileNotFoundException{
       System.out.println("You picked slave work wash: 199,95");
       fileWrite(file1, -199.95, idid);  
@@ -51,7 +53,7 @@ public class WashType extends WashOverload{
       }
       setWow(0);
    }
-   
+   // Subtracts the "Trump wash" from the customer balance and adds 1 to statistic.txt     
    public void type3(int idid) throws FileNotFoundException{
       System.out.println("You picked Trump wash: 999,95");
       fileWrite(file1, -999.95, idid);   

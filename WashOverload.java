@@ -15,30 +15,30 @@ public class WashOverload{
 
    public void fileWrite(File file, double balanceChange, int idid)throws FileNotFoundException{
    
-   Scanner s = new Scanner(file);
+      Scanner s = new Scanner(file);
                
-         while(s.hasNextLine()){
-            i++;
-            placeHolder = s.nextLine();
+      while(s.hasNextLine()){
+         i++;
+         placeHolder = s.nextLine();
             
-         }
-         String[] customerHolder = new String[i];
-         s.close();
+      }
+      String[] customerHolder = new String[i];
+      s.close();
       
-         Scanner ss = new Scanner(file);
-         for(int p = 0; p<i; p++){
-            customerHolder[p] = ss.nextLine();
-         }
+      Scanner ss = new Scanner(file);
+      for(int p = 0; p<i; p++){
+         customerHolder[p] = ss.nextLine();
+      }
          
-         String[] customerSplit = customerHolder[idid].split(",");
+      String[] customerSplit = customerHolder[idid].split(",");
          
-         double[] customerChange = new double[1];
-         customerChange[0] = (Double.parseDouble(customerSplit[2]) + balanceChange);
+      double[] customerChange = new double[1];
+      customerChange[0] = (Double.parseDouble(customerSplit[2]) + balanceChange);
          
-         customerHolder[idid] = customerSplit[0] + "," + customerSplit[1] + "," + customerChange[0];
+      customerHolder[idid] = customerSplit[0] + "," + customerSplit[1] + "," + customerChange[0];
          
-         if(customerChange[0]>=0){
-           PrintStream outPrint = new PrintStream(file);
+      if(customerChange[0]>=0){
+         PrintStream outPrint = new PrintStream(file);
       
          for(int h = 0; h<i;h++){
             outPrint.println(customerHolder[h]);
@@ -47,12 +47,12 @@ public class WashOverload{
          ss.close();  
          
          System.out.println("your balance is now: " + customerChange[0] + "\n");
-         }
-         else if(customerChange[0]<0){
-            System.out.println("Du kan ikke komme i minus\n");
-            wow = 1;
-            i = 0;
-         }
+      }
+      else if(customerChange[0]<0){
+         System.out.println("Du kan ikke komme i minus\n");
+         wow = 1;
+         i = 0;
+      }
    
    
    

@@ -10,6 +10,7 @@ public class WashCard extends WashOverload{
    Customer_v2 c = new Customer_v2();
    int i;
    
+   //Writes to customer file
    public void card() throws FileNotFoundException{
       PrintStream outPrint = new PrintStream(new FileOutputStream(file, true));
       System.out.println("type name");
@@ -20,7 +21,7 @@ public class WashCard extends WashOverload{
       c.set2ID(1);
    }
 
-
+   // Adds amount to customer file
    public void charge(int idid) throws FileNotFoundException{
       System.out.println("Type the amount too deposit");
       impAmount = s.nextDouble();
